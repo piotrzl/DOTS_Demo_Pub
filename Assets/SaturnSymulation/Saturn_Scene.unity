@@ -387,7 +387,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
@@ -407,7 +407,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
@@ -417,7 +417,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.32
+      value: -1.3203125
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
@@ -427,7 +427,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
@@ -437,7 +437,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 67471e81a50ac3148bba4ce48724d954,
         type: 3}
@@ -1370,7 +1370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882462581}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3000, z: -24000}
+  m_LocalPosition: {x: 0, y: 9000, z: -30000}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12135,7 +12135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2060112664
 RectTransform:
   m_ObjectHideFlags: 0

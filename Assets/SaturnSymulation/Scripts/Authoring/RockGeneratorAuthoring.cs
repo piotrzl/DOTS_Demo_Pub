@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -9,6 +10,12 @@ using UnityEngine;
 
 public class RockGeneratorAuthoring : MonoBehaviour
 {
+    public ConfigRockGenerator config;
+
+    [Header("Random Value")]
+    public uint RandomSeed;
+
+    [Header("   DEFALUT")]
     [Header("Rock Count")]
     [Min(1)] public int rockCount = 10000;
     [Min(1)] public int spawnRockCountPerFrame = 50;
@@ -26,9 +33,6 @@ public class RockGeneratorAuthoring : MonoBehaviour
     public float minSpawnRange = 8000f;
     public float ringWeight = 12000f;
     public float ringHight;
-
-    [Header("Random Value")]
-    public uint RandomSeed;
 }
 
 public struct RockGeneratorComponent : IComponentData
@@ -53,21 +57,38 @@ public class RockGeneratorBaker : Baker<RockGeneratorAuthoring>
     [System.Obsolete]
     public override void Bake(RockGeneratorAuthoring authoring)
     {
-     
-        AddComponent(new RockGeneratorComponent() {
-            rockCount = authoring.rockCount,
-            spawnRockCountPerFrame = authoring.spawnRockCountPerFrame,
-            minRockScale = authoring.minRockScale,
-            rangeRockScale = authoring.rangeRockScale,
-            popularValue = authoring.popularValue,
+        if(authoring.config)
+            AddComponent(new RockGeneratorComponent()
+            {
+                rockCount = authoring.config.rockCount,
+                spawnRockCountPerFrame = authoring.config.spawnRockCountPerFrame,
+                minRockScale = authoring.config.minRockScale,
+                rangeRockScale = authoring.config.rangeRockScale,
+                popularValue = authoring.config.popularValue,
 
-            minRockSpeed = authoring.minRockSpeed,
-            bonusRockSpeed = authoring.rangeRockSpeed,
+                minRockSpeed = authoring.config.minRockSpeed,
+                bonusRockSpeed = authoring.config.rangeRockSpeed,
 
-            minSpawnRange = authoring.minSpawnRange,
-            ringWeight = authoring.ringWeight,
-            ringHight = authoring.ringHight,
-        });
+                minSpawnRange = authoring.config.minSpawnRange,
+                ringWeight = authoring.config.ringWeight,
+                ringHight = authoring.config.ringHight,
+            });
+        else
+            AddComponent(new RockGeneratorComponent()
+            {
+                rockCount = authoring.rockCount,
+                spawnRockCountPerFrame = authoring.spawnRockCountPerFrame,
+                minRockScale = authoring.minRockScale,
+                rangeRockScale = authoring.rangeRockScale,
+                popularValue = authoring.popularValue,
+
+                minRockSpeed = authoring.minRockSpeed,
+                bonusRockSpeed = authoring.rangeRockSpeed,
+
+                minSpawnRange = authoring.minSpawnRange,
+                ringWeight = authoring.ringWeight,
+                ringHight = authoring.ringHight,
+            });
 
         AddComponent(new RandomGenerator
         {

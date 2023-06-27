@@ -15,13 +15,16 @@ public partial struct MoveRockSystem : ISystem
         float delaTime = SystemAPI.Time.DeltaTime;
 
 
-        Entity rockGeneratorEntity = SystemAPI.GetSingletonEntity<RockGeneratorComponent>();
-        RockGeneratorAspect rockGeneratorAspect = SystemAPI.GetAspect<RockGeneratorAspect>(rockGeneratorEntity);
+     //   Entity rockGeneratorEntity = SystemAPI.GetSingletonEntity<RockGeneratorComponent>();
+     //   RockGeneratorAspect rockGeneratorAspect = SystemAPI.GetAspect<RockGeneratorAspect>(rockGeneratorEntity);
+
+        Entity saturnEntity = SystemAPI.GetSingletonEntity<SaturnROComponent>();
+        SaturnAspect saturnAspect = SystemAPI.GetAspect<SaturnAspect>(saturnEntity);
 
         new MoveRockJob
         {
             deltaTime = delaTime,
-            center = rockGeneratorAspect._localTransform.ValueRO.Position,
+            center = saturnAspect._localTransform.ValueRO.Position,
         }.ScheduleParallel();
 
 
