@@ -19,6 +19,6 @@ MonoBehaviour:
   popularValue: 0.1
   minRockSpeed: 100
   rangeRockSpeed: 250
-  minSpawnRange: 30000
+  minSpawnRange: 35000
   ringWeight: 1
-  ringHight: 90000
+  ringHight: 100000

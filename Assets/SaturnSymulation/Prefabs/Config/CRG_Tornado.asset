@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e06a9eeac091654429cd59e7a0729def, type: 3}
-  m_Name: CRG_BigRing
+  m_Name: CRG_Tornado
   m_EditorClassIdentifier: 
-  rockCount: 16000
-  spawnRockCountPerFrame: 50
+  rockCount: 20000
+  spawnRockCountPerFrame: 100
   minRockScale: 1
   rangeRockScale: 200
-  popularValue: 0.104
-  minRockSpeed: 100
-  rangeRockSpeed: 600
+  popularValue: 0.1
+  minRockSpeed: 5000
+  rangeRockSpeed: 1000
   minSpawnRange: 9000
-  ringWeight: 40000
-  ringHight: 3000
+  ringWeight: 5000
+  ringHight: 100000

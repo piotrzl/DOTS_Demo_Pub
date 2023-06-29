@@ -74,8 +74,10 @@ public partial struct SpawnRockSystem : ISystem
         commandBuffer.Playback(state.EntityManager);
 
             
-
+        
         
         //commandBuffer.Playback(state.EntityManager);
     }
+
+   
 }
